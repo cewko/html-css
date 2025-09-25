@@ -1,0 +1,23 @@
+<!-- To improve readability, web authors add extra spaces or new lines. 
+ However, browsers display only one space between them 
+ and treat line breaks as a single space. This is called white space collapsing. -->
+
+<p>The moon is drifting away from Earth.</p>
+<p>The moon     is drifting away from Earth.</p>
+<p>The moon is drifting away from
+    
+    Earth.</p>
+
+<!-- In order to add white spaces between words, use the following methods: -->
+<!-- Non-breaking space entity -->
+<p>The moon&nbsp;&nbsp;&nbsp;is drifting away from Earth.</p>
+
+<!-- CSS white-space property (text overflows the container) -->
+<div style="width: 200px; border: 1px solid red;">
+  <p style="white-space: pre;">This is a very long line that will overflow the container boundary</p>
+</div>
+
+<!-- CSS white-space: pre-wrap (text doesn't overflow the container) -->
+<div style="width: 200px; border: 1px solid blue;">
+  <p style="white-space: pre-wrap;">This is a very long line that will wrap nicely within the container boundary</p>
+</div>
